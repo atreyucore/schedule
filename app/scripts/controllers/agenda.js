@@ -9,11 +9,25 @@
  */
 angular.module('scheduleApp')
   .controller('AgendaCtrl', function () {
-    this.schedule = schedule;
+    this.schedule = [
+      {
+        paciente: '',
+        medico: '',
+        servico: ''
+      }
+    ];
+
+    this.addSchedule = function(schedule) {
+      schedule.push(this.schedule);
+    };
   });
 
-  var schedule = {
-    paciente: 'Maicon',
-    medico: 'Maria',
-    servico: ['Consulta', 'Exame', 'Retorno']
-  }
+
+
+  /* this.schedule = [
+    {
+      paciente: 'Maicon',
+      medico: 'Maria',
+      servico: ['Consulta', 'Exame', 'Retorno']
+    }
+  */

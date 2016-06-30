@@ -1,31 +1,33 @@
-<div class="form-group" ng-submit='submit()' ng-controller='AgendaCtrl as agenda'>
-  <label class="control-label" for="paciente">Nome do Paciente</label>
-  <input type="text" ng-model='paciente' class="form-control" id="paciente">
+<form name='cadastroForm' ng-submit='agenda.addSchedule(schedule)' ng-controller='AgendaCtrl as agenda'>
+  <div  class="form-group" >
+    <label class="control-label" for="paciente">Nome do Paciente</label>
+    <input type="text" ng-model="schedule.paciente" class="form-control" id="paciente">
 
-  <label class="control-label" for="medico">Nome do Médico</label>
-  <input type="text" ng-model='medico' class="form-control" id="medico">
+    <label class="control-label" for="medico">Nome do Médico</label>
+    <input type="text" ng-model="schedule.medico" class="form-control" id="medico">
 
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value='Consulta' ng-model='Consulta'> Consulta
-    </label>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value='Consulta' ng-model='Exame'> Exame
-    </label>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value='Retorno' ng-model='Retorno'> Retorno
-    </label>
-  </div>
+    <div>
+      <label class="radio-inline">
+        <input type="radio" name='servico' value='Consulta' > Consulta
+      </label>
 
-  <div class="form-group">
-    <div class="col-lg-10 col-lg-offset-2">
-      <button type="reset" class="btn btn-default">Cancel</button>
-      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <label class="radio-inline">
+        <input type="radio" name='servico' value='Exame' > Exame
+      </label>
+
+
+      <label class="radio-inline">
+        <input type="radio" name='servico' value='Retorno' > Retorno
+      </label>
     </div>
-  </div>
 
-</div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</form>

@@ -7,10 +7,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>{{agenda.schedule.paciente}}</td>
-      <td>{{agenda.schedule.medico}}</td>
-      <td>{{agenda.schedule.servico[1]}}</td>
+    <tr ng-repeat='schedules in agenda.schedule '>
+      <td>{{schedules.paciente}}</td>
+      <td>{{schedules.medico}}</td>
+      <td>{{schedules.servico[1]}}</td>
     </tr>
   </tbody>
 </table>

@@ -17,8 +17,8 @@ angular
     $routeProvider
       .when('/form-tpl.html', {
         templateUrl:'views/form-tpl.html',
-        controller: 'FormCtrl',
-        controllerAs: 'form'
+        controller: 'AgendaCtrl',
+        controllerAs: 'agenda'
       })
       .when('/list-tpl.html', {
         templateUrl:'views/list-tpl.html',
@@ -28,15 +28,13 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
-
-  angular.module('scheduleApp')
+  })
     .controller('AgendaCtrl', function () {
       this.schedule = [
         {
           paciente: '',
           medico: '',
-          servico: ''
+          servico: []
         }
       ];
 

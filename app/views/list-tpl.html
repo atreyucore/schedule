@@ -1,0 +1,16 @@
+<table class="table table-striped table-hover container" ng-controller='AgendaCtrl as agenda'>
+  <thead>
+    <tr>
+      <th>Paciente</th>
+      <th>Médico</th>
+      <th>Serviço</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{agenda.schedule.paciente}}</td>
+      <td>{{agenda.schedule.medico}}</td>
+      <td>{{agenda.schedule.servico[1]}}</td>
+    </tr>
+  </tbody>
+</table>

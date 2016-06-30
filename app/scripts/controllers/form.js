@@ -8,6 +8,6 @@
  * Controller of the scheduleApp
  */
 angular.module('scheduleApp')
-  .controller('MainCtrl', function () {
+  .controller('FormCtrl', function () {
     
   });

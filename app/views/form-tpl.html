@@ -5,29 +5,22 @@
 
     <label class="control-label" for="medico">Nome do Médico</label>
     <input type="text" ng-model="schedule.medico" class="form-control" id="medico">
-
     <div>
       <label class="radio-inline">
         <input type="radio" name='servico' value='Consulta' > Consulta
       </label>
-
-
       <label class="radio-inline">
         <input type="radio" name='servico' value='Exame' > Exame
       </label>
-
-
       <label class="radio-inline">
         <input type="radio" name='servico' value='Retorno' > Retorno
       </label>
     </div>
-
     <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="col-lg-10 col-lg-offset-0">
+        <input type="reset" class="btn btn-default" value="Cancel"/>
+        <input type="submit" class="btn btn-primary" value="Submit"/>
       </div>
     </div>
-
   </div>
 </form>

@@ -29,3 +29,18 @@ angular
         redirectTo: '/'
       });
   });
+
+  angular.module('scheduleApp')
+    .controller('AgendaCtrl', function () {
+      this.schedule = [
+        {
+          paciente: '',
+          medico: '',
+          servico: ''
+        }
+      ];
+
+      this.addSchedule = function(schedule) {
+        schedule.push(this.schedule);
+      };
+    });

@@ -29,16 +29,10 @@ angular
         redirectTo: '/'
       });
   })
-    .controller('AgendaCtrl', function () {
-      var schedule = [{
-        paciente: '',
-        medico: '',
-        servico: ['Consulta', 'Exame', 'Retorno']
-      }];
-      
-      this.schedule = schedule;
+    .controller('AgendaCtrl', ['$scope' ,function ($scope) {
+      var schedule = {};
 
-      this.addSchedule = function(schedule) {
-        schedule.push(this.schedule);
+      var addSchedule = function() {
+        schedule = angular.push(schedule);
       };
-    });
+    }]);

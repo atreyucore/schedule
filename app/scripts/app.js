@@ -30,13 +30,13 @@ angular
       });
   })
     .controller('AgendaCtrl', function () {
-      this.schedule = [
-        {
-          paciente: '',
-          medico: '',
-          servico: []
-        }
-      ];
+      var schedule = [{
+        paciente: '',
+        medico: '',
+        servico: ['Consulta', 'Exame', 'Retorno']
+      }];
+      
+      this.schedule = schedule;
 
       this.addSchedule = function(schedule) {
         schedule.push(this.schedule);
